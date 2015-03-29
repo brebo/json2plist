@@ -15,7 +15,7 @@ class JsonToPlist:
 		# Parse arguments
 		parser = argparse.ArgumentParser(description = 'Convert JSON to Plist.')
 		parser.add_argument('--ext', nargs='?', help='extension of output files', default='plist')
-		parser.add_argument('files', nargs='+', help='files to convert')
+		parser.add_argument('files', metavar='filename', nargs='+', help='files to convert')
 		args = parser.parse_args()
 
 		for filePath in args.files:
